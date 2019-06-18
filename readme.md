@@ -2,6 +2,7 @@ akai-mpd218
 ==========
 
 ![AKAI controller](https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcRh7fVvUnaD6QuP7JXNwLEbZ7k9h9hNpKIEiwlwrm1qO2I4p-YODONAy32bn96S_MctZ6Yce3ae46V6pKwA7l46Q6IvQ464KZMF373MCHa9j7ekNS9qUkhX0g&usqp=CAc)
+
 This is a forked version of [Makio135](http://makio135.com/) WEB MIDI interface for Akai's LPD8 Controller and adapted for Akai's MPD218 controller
 
 ### MPD218 features
@@ -34,11 +35,9 @@ Sliders K1 -> K6: {
 }
 ```
 
+<hr />
 
-
-
-![Akai LPD8](lpd8_web_large.jpg)
-> The Akai LPD8 is a nice yet not too pricey USB MIDI controller, providing 8 pads and 8 knobs.
+# Inherited documentation 
 
 **akai-lpd8** is an npm package for using **Web MIDI** with such a MIDI controller offering a simple interface to access each pads and knobs:
 ```bash
