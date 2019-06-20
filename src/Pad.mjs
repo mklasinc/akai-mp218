@@ -14,8 +14,8 @@ export class Pad extends Controller {
         super.update( command, velocity );
         
         // dispatch events
-        if( command === 128 ) this.dispatchEvent( 'noteOff', this.velocity );
-        else if( command === 144 ) this.dispatchEvent( 'noteOn', this.velocity );
+        if( command === 137 ) this.dispatchEvent( 'noteOff', this.velocity );
+        else if( command === 153 ) this.dispatchEvent( 'noteOn', this.velocity );
     }
 
     noteOff( callback ) {

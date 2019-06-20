@@ -3,7 +3,7 @@ akai-mpd218
 
 ![AKAI controller](https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcRh7fVvUnaD6QuP7JXNwLEbZ7k9h9hNpKIEiwlwrm1qO2I4p-YODONAy32bn96S_MctZ6Yce3ae46V6pKwA7l46Q6IvQ464KZMF373MCHa9j7ekNS9qUkhX0g&usqp=CAc)
 
-This is a forked version of [Makio135](http://makio135.com/) WEB MIDI interface for Akai's LPD8 Controller and adapted for Akai's MPD218 controller
+This is a forked version of [Makio135](http://makio135.com/) WEB MIDI interface for Akai's MPD218 Controller and adapted for Akai's MPD218 controller
 
 ### MPD218 features
 - [MPD218 video review](https://www.youtube.com/watch?v=-X7p1fu8T3w)
@@ -45,34 +45,34 @@ npm i akai-lpd8
 ```
 
 ```js
-const AkaiLPD8 = require('akai-lpd8')
+const AkaiMPD218 = require('akai-mpd218')
 // or include <script src="https://unpkg.com/akai-lpd8@1.0.1/"></script>
 
-const LPD8 = new AkaiLPD8()
+const MPD218 = new AkaiMPD218()
 
-LPD8.init()
+MPD218.init()
     .then(() => {
-        console.log(LPD8)
-        LPD8.K1.on('change', vel => console.log({vel}))
-        LPD8.PAD5.noteOn(vel => console.log({vel}))
+        console.log(MPD218)
+        MPD218.K1.on('change', vel => console.log({vel}))
+        MPD218.PAD5.noteOn(vel => console.log({vel}))
     })
     .catch(error => console.error({ error }))
 ```
 
 Optionally, you can pass an object with a `log` property to get logs in the console
 ```js
-const LPD8 = new AkaiLPD8({log: true})
+const MPD218 = new AkaiMPD218({log: true})
 ```
 
 Once initialized, we can access our controls using their names:
 ```js
-console.log(LPD8.K1.type, LPD8.K2.command)
-background(LPD8.K3.velocity, LPD8.PAD1.velocity, LPD8.PAD2.velocity)
+console.log(MPD218.K1.type, MPD218.K2.command)
+background(MPD218.K3.velocity, MPD218.PAD1.velocity, MPD218.PAD2.velocity)
 ```
 
 And use events:
 ```js
-LPD8.K4.on('change', velocity => console.log(velocity))
+MPD218.K4.on('change', velocity => console.log(velocity))
 ```
 > Events callback are passed *velocity* as argument.
 
@@ -83,14 +83,14 @@ Valid events are:
 
 You can also use shorthands:
 ```js
-LPD8.K5.change(velocity => console.log(velocity))
-LPD8.PAD3.noteOn(velocity => console.log(velocity))
-LPD8.PAD4.noteOff(velocity => console.log(velocity))
+MPD218.K5.change(velocity => console.log(velocity))
+MPD218.PAD3.noteOn(velocity => console.log(velocity))
+MPD218.PAD4.noteOff(velocity => console.log(velocity))
 ```
 > `noteOn` and `noteOff` methods are **only available for pads**.
 
 
-### Todo for use of multiple LPD8:
-- AkaiLPD8 class should extend MIDIInput
-- use of static method to find LPD8 devices
+### Todo for use of multiple MPD218:
+- AkaiMPD218 class should extend MIDIInput
+- use of static method to find MPD218 devices
 - constructor could take a MIDIInput as argument

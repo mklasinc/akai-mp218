@@ -36,6 +36,7 @@ module.exports = {
         } ],
         'operator-linebreak': [ 2, 'after' ],
         'arrow-parens': [ 2, 'as-needed' ],
+        'max-len': ["error", { "code": 120 }],
         'computed-property-spacing': [ 2, 'always' ],
         'no-trailing-spaces': [ 2, { skipBlankLines: true } ],
         'array-bracket-spacing': [ 2, 'always', { singleValue: true, arraysInArrays: false } ],
